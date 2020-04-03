@@ -1,0 +1,29 @@
+[user]
+	name = Cang Dinh
+	email = cang.dinh@medneo.com
+[core]
+	excludesfile = /Users/cangdinh/.gitignore_global
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[commit]
+	template = /Users/cangdinh/.stCommitMsg
+[alias]
+  co = checkout
+  ci = commit
+  st = status
+  br = branch
+  lg = log --graph --oneline --abbrev-commit --decorate
+  s = status -s
+  lol = log --oneline
+  cod = "checkout develop"
+  rbd = "rebase origin/develop"
+  cln = !sh -c 'git fetch && git branch --merged | egrep -v \"(^\\*|master|dev)\" | xargs git branch -d' # cleanup local branches which are already merged
+[pull]
+  rebase = true
+[merge]
+  ff = false
+
