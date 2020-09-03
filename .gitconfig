@@ -1,37 +1,17 @@
 [user]
 	name = Cang Dinh
-<<<<<<< Updated upstream
-	email = cang.dinh@medneo.com
-=======
 	email = cang.dinh@deutschebahn.com
->>>>>>> Stashed changes
 [core]
 	excludesfile = /Users/cangdinh/.gitignore_global
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-<<<<<<< Updated upstream
-	path = 
-=======
 	path =
->>>>>>> Stashed changes
 [mergetool "sourcetree"]
 	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
 [commit]
 	template = /Users/cangdinh/.stCommitMsg
 [alias]
-<<<<<<< Updated upstream
-  co = checkout
-  ci = commit
-  st = status
-  br = branch
-  lg = log --graph --oneline --abbrev-commit --decorate
-  s = status -s
-  lol = log --oneline
-  cod = "checkout develop"
-  rbd = "rebase origin/develop"
-  cln = !sh -c 'git fetch && git branch --merged | egrep -v \"(^\\*|master|dev)\" | xargs git branch -d' # cleanup local branches which are already merged
-=======
   	lg = log --graph --oneline --abbrev-commit --decorate
   	s = status -s
   	lol = log --oneline
@@ -72,7 +52,6 @@
 	f = "!git ls-files | grep -i"
 	gr = grep -Ii
 	la = "!git config -l | grep alias | cut -c 7-"
->>>>>>> Stashed changes
 [pull]
   rebase = true
 [merge]
