@@ -29,6 +29,9 @@ brew install bash-git-prompt
 brew install git bash-completion
 brew install tree
 ```
+### Install Magnet from AppStore!
+
+Dew it
 
 ### Clone this repo and copy the files to home 
 
@@ -58,3 +61,11 @@ Host *
         AddKeysToAgent yes
         IdentityFile ~/.ssh/id_rsa
 ```
+
+### Iterm2 Confs
+
+`cd`
+`mkdir itermconf`
+`cp Cang.json ~/itermconf`
+
+Load profile in iterm configuration
