@@ -24,8 +24,6 @@ brew:
 	brew cask install Sourcetree
 
 	brew cask install visual-studio-code
-	code --install-extension esbenp.prettier-vscode
-	code --install-extension eamodio.gitlens
 
 	git config --global user.name Cang Dinh
 
@@ -35,9 +33,18 @@ brew:
 	brew install bash-git-prompt
 	brew install git bash-completion
 	brew install tree
+	brew install openshift-cli
 
 ###### SSH
 # Add manually id_rsa.pub to github/gitlab/bitbucket after key creation
+
+code_extensions:
+	code --install-extension esbenp.prettier-vscode
+	code --install-extension eamodio.gitlens
+	code --install-extension joaompinto.asciidoctor-vscode
+	code --install-extension ms-azuretools.vscode-docker
+	code --install-extension ms-vsliveshare.vsliveshare
+	code --install-extension redhat.vscode-yaml
 
 sshkey:
 	ssh-keygen -t rsa
