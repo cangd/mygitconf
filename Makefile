@@ -1,6 +1,6 @@
 ###### CONFS
 
-load_configs: bash_profile gitconfig itermconfig
+load_configs: load_bash_profile load_gitconfig load_iterm_config
 
 load_bash_profile:
 	cp .bash_profile ~/	
@@ -11,7 +11,7 @@ load_gitconfig:
 load_iterm_config:
 	cp Cang.json ~/itermconf
 
-save_configs: 
+save_configs: save_gitconfig save_bash_profile
 
 save_gitconfig:
 	cp ~/.gitconfig .
