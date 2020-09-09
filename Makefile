@@ -1,15 +1,23 @@
 ###### CONFS
 
-configs: bash_profile gitconfig itermconfig
+load_configs: bash_profile gitconfig itermconfig
 
-bash_profile:
+load_bash_profile:
 	cp .bash_profile ~/	
 
-gitconfig:
+load_gitconfig:
 	cp .gitconfig ~/
 
-itermconfig:
+load_iterm_config:
 	cp Cang.json ~/itermconf
+
+save_configs: 
+
+save_gitconfig:
+	cp ~/.gitconfig .
+
+save_bash_profile:
+	cp ~/.bash_profile .
 
 ###### BREW CASKS and BREW
 
@@ -22,6 +30,7 @@ brew:
 	brew cask install spotify
 	brew cask install alfred3
 	brew cask install Sourcetree
+	brew cask install keepassx
 
 	brew cask install visual-studio-code
 
@@ -31,10 +40,15 @@ brew:
 	brew install jq
 	brew install gpg2
 	brew install bash-git-prompt
-	brew install git bash-completion
+	brew install bash-completion@2
 	brew install tree
 	brew install openshift-cli
-
+	brew install helm
+	brew install kubectl
+	brew install kubernetes-cli 
+	brew install minikube
+	brew install hyperkit
+	
 ###### SSH
 # Add manually id_rsa.pub to github/gitlab/bitbucket after key creation
 
@@ -45,11 +59,14 @@ code_extensions:
 	code --install-extension ms-azuretools.vscode-docker
 	code --install-extension ms-vsliveshare.vsliveshare
 	code --install-extension redhat.vscode-yaml
+	code --install-extension ms-kubernetes-tools.vscode-kubernetes-tools
 
-sshkey:
+	
+
+ssh_key:
 	ssh-keygen -t rsa
 
-addsshtokeychain:
+add_ssh_to_keychain:
 	ssh-add -K ~/.ssh/id_rsa
 	cp config ~/.ssh/config
 
