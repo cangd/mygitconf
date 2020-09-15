@@ -10,6 +10,7 @@ fi
 export BASH_COMPLETION_COMPAT_DIR="/usr/local/etc/bash_completion.d"
 [[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
 
+
 complete -W "\`grep -oE '^[a-zA-Z0-9_.-]+:([^=]|$)' Makefile | sed 's/[^a-zA-Z0-9_.-]*$//'\`" make
 
 alias gs='git status '
@@ -33,15 +34,18 @@ alias diclean='docker rmi $(docker images)'
 
 alias reload='. ~/.bash_profile'
 
+alias m='minikube'
 
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk-9.0.4.jdk/Contents/Home
 export JDK_HOME=/Library/Java/JavaVirtualMachines/jdk-9.0.4.jdk/Contents/Home
 
 launchctl setenv JAVA_HOME $JAVA_HOME
-~
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 export PATH="/usr/local/opt/curl-openssl/bin:$PATH"
 
 export PATH=$PATH:/Users/cangdinh/bin/slack-theme
 export SLACK_THEME_SHELL_PROFILE="/Users/cangdinh/.bash_profile"
+complete -F __start_kubectl k
+alias k=kubectl
+source <(kubectl completion bash)

@@ -17,6 +17,7 @@ brew:
 	brew install ack
 	brew install jq
 	brew install gpg2
+	brew install watch
 	brew install bash-git-prompt
 	brew install bash-completion@2
 	brew install tree
