@@ -87,3 +87,5 @@ code_extensions:
 	code --install-extension ms-vsliveshare.vsliveshare
 	code --install-extension redhat.vscode-yaml
 	code --install-extension ms-kubernetes-tools.vscode-kubernetes-tools
+	code --install-extension vscode-angular-html
+	code --install-extension dark-plus-syntax
